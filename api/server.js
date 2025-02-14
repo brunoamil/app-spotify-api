@@ -1,10 +1,11 @@
 import express from 'express';
-
+import cors  from 'cors'
 import { database } from './connect.js';
 
 const PORT = 3001;
 const app = express();
 
+app.use((cors()));
 app.get('/', (req, res) => {
     res.send('Just andpoint for artists')
 });
