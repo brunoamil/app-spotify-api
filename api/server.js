@@ -10,7 +10,7 @@ app.get('/api/', (req, res) => {
     res.send('Just andpoint for artists')
 });
 
-app.get('/api//artists', async (req, res) => {
+app.get('/api/artists', async (req, res) => {
     res.send(await database.collection('artists').find({}).toArray())
 });
 
